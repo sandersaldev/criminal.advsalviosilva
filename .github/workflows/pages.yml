@@ -36,8 +36,12 @@ jobs:
           npx tailwindcss -i ./src/input.css -o ./out/dist/output.css -m
           cp index.html out/
           cp script.js out/
+          # copia CSS também para a raiz como style.css (caminho mais simples)
+          cp ./out/dist/output.css ./out/style.css
           if [ -f CNAME ]; then cp CNAME out/; fi
           cp -r public/* out/public/
+          # garante que o Pages não rode Jekyll
+          touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
