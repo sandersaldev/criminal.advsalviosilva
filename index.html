@@ -10,6 +10,25 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="public/Logo_Salvio-Silva-Advogado - Blue H.webp">
     <link rel="stylesheet" href="dist/output.css">
+    <script>
+      (function(){
+        function cssLikelyLoaded(){
+          var v = getComputedStyle(document.documentElement).getPropertyValue('--tw-ring-color');
+          return v && v.trim() !== '';
+        }
+        function inject(href){
+          var l = document.createElement('link');
+          l.rel = 'stylesheet';
+          l.href = href + (href.indexOf('?')>-1?'&':'?') + 'v=' + Date.now();
+          document.head.appendChild(l);
+        }
+        window.addEventListener('load', function(){
+          if(!cssLikelyLoaded()){
+            inject('/dist/output.css'); // fallback absoluto para Pages com domínio
+          }
+        });
+      })();
+    </script>
     <link rel="icon" href="public/Logo_Salvio-Silva-Advogado - Blue H.webp" type="image/webp">
     <link rel="shortcut icon" href="public/Logo_Salvio-Silva-Advogado - Blue H.webp">
     <link rel="apple-touch-icon" href="public/Logo_Salvio-Silva-Advogado - Blue H.webp">
