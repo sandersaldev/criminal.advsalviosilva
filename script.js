@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappBtn = document.querySelector('.btn-whatsapp');
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function() {
-            const phoneNumber = '5593992241438'; // Número do WhatsApp
+            const phoneNumber = '5593992431438'; // Número do WhatsApp
             const message = 'Olá! Gostaria de agendar uma consulta jurídica.';
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
